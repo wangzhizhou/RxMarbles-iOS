@@ -9,3 +9,4 @@ xcuserdata
 **/xcshareddata/WorkspaceSettings.xcsettings
 vender/bundle
 *.xcworkspace
+Pods/
