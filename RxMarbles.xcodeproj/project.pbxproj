@@ -34,7 +34,6 @@
 		2DA5B8272389766D00275B96 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA5B8262389766D00275B96 /* Section.swift */; };
 		2DA5B82A2389784700275B96 /* OperatorsTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA5B8292389784700275B96 /* OperatorsTableViewModel.swift */; };
 		654CF3E32222BC2300E68D10 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 654CF3E52222BC2300E68D10 /* Localizable.strings */; };
-		6B5417EA67FBF1ABDB81F389 /* Pods_RxMarbles.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 354B57C154849AC0C5DFAA67 /* Pods_RxMarbles.framework */; };
 		A3B1F0351FDF47B0002F4CAC /* Bag.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B1F0341FDF47B0002F4CAC /* Bag.swift */; };
 		D25E7A501C41BD4800B08F70 /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25E7A4F1C41BD4800B08F70 /* Operator.swift */; };
 		D25E7A521C41BF3F00B08F70 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D25E7A511C41BF3F00B08F70 /* Launch Screen.storyboard */; };
@@ -79,12 +78,9 @@
 		0AFA29EB1C772DA300070AF2 /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		2DA5B8262389766D00275B96 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		2DA5B8292389784700275B96 /* OperatorsTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorsTableViewModel.swift; sourceTree = "<group>"; };
-		354B57C154849AC0C5DFAA67 /* Pods_RxMarbles.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxMarbles.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		654CF3E42222BC2300E68D10 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		654CF3E62222BC2C00E68D10 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
-		6986C35E08407E6F25C12994 /* Pods-RxMarbles.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxMarbles.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxMarbles/Pods-RxMarbles.debug.xcconfig"; sourceTree = "<group>"; };
 		A3B1F0341FDF47B0002F4CAC /* Bag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bag.swift; sourceTree = "<group>"; };
-		CAE724EF79E7DD1CA47C8ADE /* Pods-RxMarbles.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxMarbles.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxMarbles/Pods-RxMarbles.release.xcconfig"; sourceTree = "<group>"; };
 		D25E7A4F1C41BD4800B08F70 /* Operator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operator.swift; sourceTree = "<group>"; };
 		D25E7A511C41BF3F00B08F70 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		D28A68471C629073008A8C6F /* OperatorCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperatorCode.swift; sourceTree = "<group>"; };
@@ -103,7 +99,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B5417EA67FBF1ABDB81F389 /* Pods_RxMarbles.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,7 +134,6 @@
 				0AC265911C3D2C24009E28FD /* RxMarbles */,
 				0AC265901C3D2C24009E28FD /* Products */,
 				D028916D53309B4D877173B9 /* Frameworks */,
-				3C070976F34E97EE5EAAE3BE /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -195,20 +189,10 @@
 			name = ViewModels;
 			sourceTree = "<group>";
 		};
-		3C070976F34E97EE5EAAE3BE /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				6986C35E08407E6F25C12994 /* Pods-RxMarbles.debug.xcconfig */,
-				CAE724EF79E7DD1CA47C8ADE /* Pods-RxMarbles.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		D028916D53309B4D877173B9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				0AC265A41C3D2D1B009E28FD /* SpriteKit.framework */,
-				354B57C154849AC0C5DFAA67 /* Pods_RxMarbles.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -265,12 +249,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0AC265A11C3D2C24009E28FD /* Build configuration list for PBXNativeTarget "RxMarbles" */;
 			buildPhases = (
-				45FD365BAAC66359A170F6FB /* [CP] Check Pods Manifest.lock */,
 				0AC2658B1C3D2C24009E28FD /* Sources */,
 				0AC2658C1C3D2C24009E28FD /* Frameworks */,
 				0AC2658D1C3D2C24009E28FD /* Resources */,
 				0A9D41121C5F31A700ECADF1 /* Run Fabric */,
-				9C2518058971B20966D61966 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -347,50 +329,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Fabric/run\" b824a78adf5fc476fa301f0ae83ab49db162c671 88e1da6edaebfbae81b510e11bfef114ee0abf2e1d677c9305dc4027af2ad278";
-		};
-		45FD365BAAC66359A170F6FB /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-RxMarbles-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9C2518058971B20966D61966 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RxMarbles/Pods-RxMarbles-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Device/Device.framework",
-				"${BUILT_PRODUCTS_DIR}/RazzleDazzle/RazzleDazzle.framework",
-				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Device.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RazzleDazzle.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RxMarbles/Pods-RxMarbles-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -561,7 +499,6 @@
 		};
 		0AC265A21C3D2C24009E28FD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6986C35E08407E6F25C12994 /* Pods-RxMarbles.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -583,7 +520,6 @@
 		};
 		0AC265A31C3D2C24009E28FD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CAE724EF79E7DD1CA47C8ADE /* Pods-RxMarbles.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";

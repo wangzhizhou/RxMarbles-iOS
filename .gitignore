@@ -7,3 +7,5 @@ xcuserdata
 *.xcworkspace/contents.xcworkspacedata
 /*.gcno
 **/xcshareddata/WorkspaceSettings.xcsettings
+vender/bundle
+*.xcworkspace
