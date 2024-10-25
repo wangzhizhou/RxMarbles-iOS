@@ -29,7 +29,7 @@ public struct TestSchedulerVirtualTimeConverter : VirtualTimeConverterType {
     /// - parameter virtualTime: Virtual time to convert to `Date`.
     /// - returns: `Date` corresponding to virtual time.
     public func convertFromVirtualTime(_ virtualTime: VirtualTimeUnit) -> RxTime {
-        return Date(timeIntervalSince1970: RxTimeInterval(virtualTime) * _resolution)
+        return .init(timeIntervalSince1970: TimeInterval(virtualTime) * _resolution)
     }
 
     /// Converts real time to virtual time.
@@ -44,15 +44,16 @@ public struct TestSchedulerVirtualTimeConverter : VirtualTimeConverterType {
     ///
     /// - parameter virtualTimeInterval: Virtual time interval to convert to `NSTimeInterval`.
     /// - returns: `NSTimeInterval` corresponding to virtual time interval.
-    public func convertFromVirtualTimeInterval(_ virtualTimeInterval: VirtualTimeIntervalUnit) -> RxTimeInterval {
-        return RxTimeInterval(virtualTimeInterval) * _resolution
+    public func convertFromVirtualTimeInterval(_ virtualTimeInterval: VirtualTimeIntervalUnit) -> TimeInterval {
+        return TimeInterval(virtualTimeInterval) * _resolution
     }
 
     /// Converts from virtual time interval to `NSTimeInterval`.
     ///
     /// - parameter timeInterval: `NSTimeInterval` to convert to virtual time interval.
     /// - returns: Virtual time interval corresponding to time interval.
-    public func convertToVirtualTimeInterval(_ timeInterval: RxTimeInterval) -> VirtualTimeIntervalUnit {
+    ///
+    public func convertToVirtualTimeInterval(_ timeInterval: TimeInterval) -> VirtualTimeIntervalUnit {
         return VirtualTimeIntervalUnit(timeInterval / _resolution + 0.5)
     }
 

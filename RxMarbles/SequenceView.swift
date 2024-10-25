@@ -44,7 +44,7 @@ class SequenceView: UIView {
             Version.iPadMini4,
             Version.iPadPro10_5Inch
         ]
-        debounce = powerDevices.contains(Device.version()) ? 0.008 : 0.03
+        debounce = .milliseconds(powerDevices.contains(Device.version()) ? 8 : 3) 
     }
     
     override func layoutSubviews() {

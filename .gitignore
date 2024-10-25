@@ -10,3 +10,4 @@ xcuserdata
 vender/bundle
 *.xcworkspace
 Pods/
+build/

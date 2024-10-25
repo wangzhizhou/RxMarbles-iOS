@@ -58,7 +58,7 @@ private func _named(_ name: String) -> UIImage {
 }
 
 extension UIImage {
-    func imageView() -> UIImageView {
+    @MainActor func imageView() -> UIImageView {
         return UIImageView(image: self)
     }
 }

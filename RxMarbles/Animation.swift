@@ -11,7 +11,7 @@ import UIKit
 
 struct Animation {
     
-    static func shake(view: UIView) {
+    @MainActor static func shake(view: UIView) {
         let animation = CAKeyframeAnimation(keyPath: "transform")
         let wobbleAngle: CGFloat = 0.3
         
@@ -28,11 +28,11 @@ struct Animation {
         }
     }
     
-    static func stopShake(view: UIView) {
+    @MainActor static func stopShake(view: UIView) {
         view.layer.removeAnimation(forKey: "shake")
     }
     
-    static func hideWithCompletion(_ view: UIView, completion: @escaping (Bool) -> Void) {
+    @MainActor static func hideWithCompletion(_ view: UIView, completion: @escaping (Bool) -> Void) {
         UIView.animate(
             withDuration: 0.3,
             animations: {
@@ -43,7 +43,7 @@ struct Animation {
         )
     }
     
-    static func scale(_ view: UIView) {
+    @MainActor static func scale(_ view: UIView) {
         UIView.animate(
             withDuration: 0.3,
             animations: {
@@ -53,7 +53,7 @@ struct Animation {
         )
     }
     
-    static func rotate(_ view:UIView, toAngle angle: CGFloat) {
+    @MainActor static func rotate(_ view:UIView, toAngle angle: CGFloat) {
         UIView.animate(withDuration: 0.6) {
             if angle > 0.0 {
                 view.transform = CGAffineTransform(rotationAngle: angle)
@@ -64,7 +64,7 @@ struct Animation {
         }
     }
     
-    static func stopAll(view: UIView) {
+    @MainActor static func stopAll(view: UIView) {
         view.layer.removeAllAnimations()
     }
 }

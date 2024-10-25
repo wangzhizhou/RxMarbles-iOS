@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -33,6 +33,7 @@
 		0AFA29EC1C772DA300070AF2 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFA29EB1C772DA300070AF2 /* Notifications.swift */; };
 		2DA5B8272389766D00275B96 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA5B8262389766D00275B96 /* Section.swift */; };
 		2DA5B82A2389784700275B96 /* OperatorsTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA5B8292389784700275B96 /* OperatorsTableViewModel.swift */; };
+		394F614FD5E50B7E88FE2E74 /* Pods_RxMarbles.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41DFD3D808280E0AB2E8000F /* Pods_RxMarbles.framework */; };
 		654CF3E32222BC2300E68D10 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 654CF3E52222BC2300E68D10 /* Localizable.strings */; };
 		A3B1F0351FDF47B0002F4CAC /* Bag.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B1F0341FDF47B0002F4CAC /* Bag.swift */; };
 		D25E7A501C41BD4800B08F70 /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25E7A4F1C41BD4800B08F70 /* Operator.swift */; };
@@ -78,6 +79,9 @@
 		0AFA29EB1C772DA300070AF2 /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		2DA5B8262389766D00275B96 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		2DA5B8292389784700275B96 /* OperatorsTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorsTableViewModel.swift; sourceTree = "<group>"; };
+		34295F993186FE14E33A29ED /* Pods-RxMarbles.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxMarbles.release.xcconfig"; path = "Target Support Files/Pods-RxMarbles/Pods-RxMarbles.release.xcconfig"; sourceTree = "<group>"; };
+		41DFD3D808280E0AB2E8000F /* Pods_RxMarbles.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxMarbles.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5347FA51C5CE4F8E426E52D0 /* Pods-RxMarbles.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxMarbles.debug.xcconfig"; path = "Target Support Files/Pods-RxMarbles/Pods-RxMarbles.debug.xcconfig"; sourceTree = "<group>"; };
 		654CF3E42222BC2300E68D10 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		654CF3E62222BC2C00E68D10 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A3B1F0341FDF47B0002F4CAC /* Bag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bag.swift; sourceTree = "<group>"; };
@@ -99,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				394F614FD5E50B7E88FE2E74 /* Pods_RxMarbles.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,6 +139,7 @@
 				0AC265911C3D2C24009E28FD /* RxMarbles */,
 				0AC265901C3D2C24009E28FD /* Products */,
 				D028916D53309B4D877173B9 /* Frameworks */,
+				A3D2A072E3C9AFD75FE7192A /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -189,10 +195,20 @@
 			name = ViewModels;
 			sourceTree = "<group>";
 		};
+		A3D2A072E3C9AFD75FE7192A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5347FA51C5CE4F8E426E52D0 /* Pods-RxMarbles.debug.xcconfig */,
+				34295F993186FE14E33A29ED /* Pods-RxMarbles.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D028916D53309B4D877173B9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				0AC265A41C3D2D1B009E28FD /* SpriteKit.framework */,
+				41DFD3D808280E0AB2E8000F /* Pods_RxMarbles.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -249,10 +265,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0AC265A11C3D2C24009E28FD /* Build configuration list for PBXNativeTarget "RxMarbles" */;
 			buildPhases = (
+				36526C29380278F00D6D294B /* [CP] Check Pods Manifest.lock */,
 				0AC2658B1C3D2C24009E28FD /* Sources */,
 				0AC2658C1C3D2C24009E28FD /* Frameworks */,
 				0AC2658D1C3D2C24009E28FD /* Resources */,
-				0A9D41121C5F31A700ECADF1 /* Run Fabric */,
+				8DCD3B7DD8E82FF91BF4290B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -269,14 +286,15 @@
 		0AC265871C3D2C23009E28FD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				CLASSPREFIX = RXM;
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1600;
 				ORGANIZATIONNAME = AnjLab;
 				TargetAttributes = {
 					0AC2658E1C3D2C24009E28FD = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = FD6ZML48V9;
+						DevelopmentTeam = 2N62934Y28;
 						LastSwiftMigration = 1100;
 						ProvisioningStyle = Automatic;
 					};
@@ -316,19 +334,53 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0A9D41121C5F31A700ECADF1 /* Run Fabric */ = {
+		36526C29380278F00D6D294B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RxMarbles-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8DCD3B7DD8E82FF91BF4290B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RxMarbles/Pods-RxMarbles-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Device/Device.framework",
+				"${BUILT_PRODUCTS_DIR}/RazzleDazzle/RazzleDazzle.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
-			name = "Run Fabric";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Device.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RazzleDazzle.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Fabric/run\" b824a78adf5fc476fa301f0ae83ab49db162c671 88e1da6edaebfbae81b510e11bfef114ee0abf2e1d677c9305dc4027af2ad278";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RxMarbles/Pods-RxMarbles-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -413,6 +465,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -423,6 +476,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -437,12 +491,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 6.0;
 			};
 			name = Debug;
 		};
@@ -469,6 +523,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -480,6 +535,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -488,52 +544,57 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 2.3;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		0AC265A21C3D2C24009E28FD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5347FA51C5CE4F8E426E52D0 /* Pods-RxMarbles.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 30;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = FD6ZML48V9;
-				ENABLE_BITCODE = YES;
+				DEVELOPMENT_TEAM = 2N62934Y28;
 				INFOPLIST_FILE = RxMarbles/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.2.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.anjlab.RxMarbles;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		0AC265A31C3D2C24009E28FD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34295F993186FE14E33A29ED /* Pods-RxMarbles.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 30;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = FD6ZML48V9;
-				ENABLE_BITCODE = YES;
+				DEVELOPMENT_TEAM = 2N62934Y28;
 				INFOPLIST_FILE = RxMarbles/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.2.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.anjlab.RxMarbles;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

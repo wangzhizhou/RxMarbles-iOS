@@ -1,51 +1,43 @@
 PODS:
-  - Crashlytics (3.12.0):
-    - Fabric (~> 1.9.0)
-  - Device (3.1.2)
-  - Fabric (1.9.0)
-  - RazzleDazzle (0.2.0)
-  - RxAtomic (4.4.1)
-  - RxCocoa (4.4.1):
-    - RxSwift (~> 4.0)
-  - RxSwift (4.4.1):
-    - RxAtomic (~> 4.4)
+  - Device (3.7.0)
+  - RazzleDazzle (0.3.0)
+  - RxCocoa (6.8.0):
+    - RxRelay (= 6.8.0)
+    - RxSwift (= 6.8.0)
+  - RxRelay (6.8.0):
+    - RxSwift (= 6.8.0)
+  - RxSwift (6.8.0)
 
 DEPENDENCIES:
-  - Crashlytics
   - Device
-  - Fabric
-  - RazzleDazzle (from `https://github.com/carlosypunto/RazzleDazzle.git`, tag `0.2.0`)
-  - RxCocoa (~> 4.0)
-  - RxSwift (~> 4.0)
+  - RazzleDazzle (from `https://github.com/wangzhizhou/RazzleDazzle.git`, branch `master`)
+  - RxCocoa
+  - RxSwift
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - Crashlytics
+  trunk:
     - Device
-    - Fabric
-    - RxAtomic
     - RxCocoa
+    - RxRelay
     - RxSwift
 
 EXTERNAL SOURCES:
   RazzleDazzle:
-    :git: https://github.com/carlosypunto/RazzleDazzle.git
-    :tag: 0.2.0
+    :branch: master
+    :git: https://github.com/wangzhizhou/RazzleDazzle.git
 
 CHECKOUT OPTIONS:
   RazzleDazzle:
-    :git: https://github.com/carlosypunto/RazzleDazzle.git
-    :tag: 0.2.0
+    :commit: 71ff4c4ec16fc6e6897ecf7fda763bb24273ed16
+    :git: https://github.com/wangzhizhou/RazzleDazzle.git
 
 SPEC CHECKSUMS:
-  Crashlytics: 07fb167b1694128c1c9a5a5cc319b0e9c3ca0933
-  Device: 62242076214c30fb5760174b3601cefafa70a481
-  Fabric: f988e33c97f08930a413e08123064d2e5f68d655
-  RazzleDazzle: 6ab76b0790cafc13e3acee9ef7c863bd63f472a4
-  RxAtomic: f8d6adc1ccb87a767811269e4875887bc74dbf19
-  RxCocoa: 2f35a76bf8887872e28a1914112395b11b8e0e64
-  RxSwift: 92fcf68dfef21f3e2ab1965363d9e7b3d787597e
+  Device: acf18785fd7359aca095040e9c4745caf33b9cf1
+  RazzleDazzle: 62dfe268473c14a9b38138f5b2003a2c8e729180
+  RxCocoa: 2d33c1e1e5d66492052ad46b11024ae287572880
+  RxRelay: 335c78b926a2aea8d863a6d25f1ed3b5ad8e8705
+  RxSwift: 4e28be97cbcfeee614af26d83415febbf2bf6f45
 
-PODFILE CHECKSUM: 176a9ad81388cfc1a7ed586168641a851a009841
+PODFILE CHECKSUM: 7916c0829a88828f9dc964cbf20a4a9cb2a17cd2
 
-COCOAPODS: 1.6.0
+COCOAPODS: 1.15.2

@@ -9,11 +9,9 @@
 
 import UIKit
 import CoreSpotlight
-import Fabric
-import Crashlytics
 import RxSwift
 
-@UIApplicationMain
+@main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
@@ -25,7 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        Fabric.with([Crashlytics.self])
         
         window = UIWindow()
         

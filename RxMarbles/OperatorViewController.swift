@@ -56,7 +56,7 @@ class OperatorViewController: UIViewController {
                 .require
         else { return }
        
-        [
+        try? [
             _sceneView.sourceSequenceA?.longPressGestureRecorgnizer,
             _sceneView.sourceSequenceB?.longPressGestureRecorgnizer
         ]

@@ -440,15 +440,15 @@ extension Operator {
             return aO!.amb(bO!)
         case .buffer:
             return aO!
-                .buffer(timeSpan: 150, count: 3, scheduler: scheduler)
+                .buffer(timeSpan: .milliseconds(150), count: 3, scheduler: scheduler)
                 .map {
                     let values = $0.map {$0.value } .joined(separator: ", ")
                     return ColoredType(value: "[\(values)]", color: Color.nextGreen, shape: .triangle)
             }
         case .catchError:
-            return aO!.catchError { _ in return .just(ColoredType(value: "1", color: Color.nextBlue, shape: .circle)) }
+            return aO!.catch { _ in return .just(ColoredType(value: "1", color: Color.nextBlue, shape: .circle)) }
         case .catchErrorJustReturn:
-            return aO!.catchErrorJustReturn(ColoredType(value: "1", color: Color.nextBlue, shape: .circle))
+            return aO!.catchAndReturn(ColoredType(value: "1", color: Color.nextBlue, shape: .circle))
         case .combineLatest:
             return Observable.combineLatest(aO!, bO!) {
                 return ColoredType(value: $0.value + $1.value, color: $0.color, shape: $1.shape)
@@ -456,15 +456,15 @@ extension Operator {
         case .concat:
             return aO!.concat(bO!)
         case .debounce:
-            return aO!.debounce(100, scheduler: scheduler)
+            return aO!.debounce(.milliseconds(100), scheduler: scheduler)
         case .throttle:
-            return aO!.throttle(100, scheduler: scheduler)
+            return aO!.throttle(.milliseconds(100), scheduler: scheduler)
         case .delaySubscription:
-            return aO!.delaySubscription(150, scheduler: scheduler)
+            return aO!.delaySubscription(.milliseconds(150), scheduler: scheduler)
         case .distinctUntilChanged:
             return aO!.distinctUntilChanged()
         case .elementAt:
-            return aO!.elementAt(2)
+            return aO!.element(at: 2)
         case .empty:
             return Observable.empty()
         case .filter:
@@ -500,7 +500,7 @@ extension Operator {
                     return Observable.never()
             }
         case .interval:
-            return Observable<Int64>.interval(100, scheduler: scheduler).map { t in ColoredType(value: String(t), color: Color.nextRandom, shape: .circle) }
+            return Observable<Int64>.interval(.milliseconds(100), scheduler: scheduler).map { t in ColoredType(value: String(t), color: Color.nextRandom, shape: .circle) }
         case .just:
             return Observable.just(ColoredType(value: "", color: Color.nextRandom, shape: .circle))
         case .map:
@@ -529,7 +529,7 @@ extension Operator {
                 return ColoredType(value: String(a + b), color: $1.color, shape: $1.shape)
             }
         case .repeatElement:
-            return Observable<Int64>.interval(150, scheduler: scheduler).map { _ in ColoredType(value: "1", color: Color.nextGreen, shape: .star)}
+            return Observable<Int64>.interval(.milliseconds(150), scheduler: scheduler).map { _ in ColoredType(value: "1", color: Color.nextGreen, shape: .star)}
         case .retry:
             return aO!.retry(2)
         case .sample:
@@ -544,14 +544,14 @@ extension Operator {
         case .skip:
             return aO!.skip(2)
         case .skipDuration:
-            return aO!.skip(400, scheduler: scheduler)
+            return aO!.skip(.milliseconds(400), scheduler: scheduler)
         case .skipUntil:
-            return aO!.skipUntil(bO!)
+            return aO!.skip(until: bO!)
         case .skipWhile:
-            return aO!.skipWhile { e in Int(e.value)! < 4 }
+            return aO!.skip { e in Int(e.value)! < 4 }
         case .skipWhileWithIndex:
             return aO!.enumerated()
-                .skipWhile { index, _ in index < 4 }
+                .skip { index, _ in index < 4 }
                 .map { _, element in element }
         case .startWith:
             return aO!.startWith(ColoredType(value: "1", color: Color.nextGreen, shape: .circle))
@@ -560,11 +560,11 @@ extension Operator {
         case .take:
             return aO!.take(2)
         case .takeDuration:
-            return aO!.take(400, scheduler: scheduler)
+            return aO!.take(for: .milliseconds(400), scheduler: scheduler)
         case .takeLast:
             return aO!.takeLast(2)
         case .takeUntil:
-            return aO!.takeUntil(bO!)
+            return aO!.take(until: bO!)
         case .takeWhile:
             return aO!.takeWhile { e in Int(e.value)! < 4 }
         case .takeWhileWithIndex:
@@ -574,16 +574,16 @@ extension Operator {
         case .throw:
             return Observable.error(RxError.unknown)
         case .timeout:
-            return aO!.timeout(200, scheduler: scheduler)
+            return aO!.timeout(.milliseconds(200), scheduler: scheduler)
         case .timer:
-            return Observable<Int64>.timer(500, scheduler: scheduler).map { t in ColoredType(value: String(t), color: Color.nextRandom, shape: .circle) }
+            return Observable<Int64>.timer(.milliseconds(500), scheduler: scheduler).map { t in ColoredType(value: String(t), color: Color.nextRandom, shape: .circle) }
         case .toArray:
             return aO!
                 .toArray()
                 .map {
                     let values = $0.map {$0.value } .joined(separator: ", ")
                     return ColoredType(value: "[\(values)]", color: Color.nextGreen, shape: .rect)
-            }
+                }.asObservable()
         case .withLatestFrom:
             return aO!.withLatestFrom(bO!)
         case .zip:

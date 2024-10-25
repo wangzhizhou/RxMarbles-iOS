@@ -61,7 +61,7 @@ public func == <Element: Equatable>(lhs: Event<Element?>, rhs: Event<Element?>) 
 /// and their string representations are equal.
 public func == <Element: Equatable>(lhs: SingleEvent<Element>, rhs: SingleEvent<Element>) -> Bool {
     switch (lhs, rhs) {
-    case (.error(let e1), .error(let e2)):
+    case (.failure(let e1), .failure(let e2)):
         #if os(Linux)
             return  "\(e1)" == "\(e2)"
         #else

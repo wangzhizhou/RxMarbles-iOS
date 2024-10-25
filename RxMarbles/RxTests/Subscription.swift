@@ -38,9 +38,9 @@ extension Subscription
     : Hashable
     , Equatable {
     /// The hash value.
-    public var hashValue : Int {
-        return subscribe.hashValue ^ unsubscribe.hashValue
-    }
+        public func hash(into hasher: inout Hasher) {
+            hasher.combine(subscribe.hashValue ^ unsubscribe.hashValue)
+        }
 }
 
 extension Subscription

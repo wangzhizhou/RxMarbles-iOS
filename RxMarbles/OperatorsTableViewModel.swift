@@ -42,7 +42,7 @@ extension OperatorsTableViewModel {
 }
 
 extension OperatorsTableViewModel {
-	func updateSearchResults(for searchController: UISearchController) {
+    @MainActor func updateSearchResults(for searchController: UISearchController) {
 		guard searchController.isActive, let text = searchController.searchBar.text, !text.isEmpty else { self.reset(); return }
 		self.filteredSections.removeAll()
 		self.sections.forEach { section in

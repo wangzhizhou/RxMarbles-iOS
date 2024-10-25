@@ -29,7 +29,7 @@ public class TestableObservable<Element>
         self.subscriptions = []
     }
 
-    public func subscribe<O : ObserverType>(_ observer: O) -> Disposable where O.E == Element {
+    public func subscribe<O : ObserverType>(_ observer: O) -> Disposable where O.Element == Element {
         fatalError("Abstract method")
     }
 }

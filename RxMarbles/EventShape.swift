@@ -8,7 +8,7 @@
 
 import UIKit
 
-private var __coloredImages = [String: UIImage]()
+nonisolated(unsafe) private var __coloredImages = [String: UIImage]()
 
 enum EventShape: String {
     case circle
