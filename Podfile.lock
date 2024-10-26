@@ -28,7 +28,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   RazzleDazzle:
-    :commit: 71ff4c4ec16fc6e6897ecf7fda763bb24273ed16
+    :commit: 6d11b9cb4b821887dafac005f31f9c93637618b2
     :git: https://github.com/wangzhizhou/RazzleDazzle.git
 
 SPEC CHECKSUMS:
