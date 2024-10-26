@@ -496,9 +496,7 @@ extension Operator {
         //            }
         case .ignoreElements:
             return aO!.ignoreElements().asObservable()
-                .flatMapLatest { _ in
-                    return Observable.never()
-            }
+                .flatMapLatest { _ -> Observable<ColoredType> in }
         case .interval:
             return Observable<Int64>.interval(.milliseconds(100), scheduler: scheduler).map { t in ColoredType(value: String(t), color: Color.nextRandom, shape: .circle) }
         case .just:
@@ -566,10 +564,10 @@ extension Operator {
         case .takeUntil:
             return aO!.take(until: bO!)
         case .takeWhile:
-            return aO!.takeWhile { e in Int(e.value)! < 4 }
+            return aO!.take(while:{ e in Int(e.value)! < 4 })
         case .takeWhileWithIndex:
             return aO!.enumerated()
-                .takeWhile { index, _ in index < 4 }
+                .take(while:{ index, _ in index < 4 })
                 .map { _, element in element  }
         case .throw:
             return Observable.error(RxError.unknown)
